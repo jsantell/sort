@@ -3,6 +3,7 @@ import bubbleSort from '../src/bubble-sort';
 import insertionSort from '../src/insertion-sort';
 import selectionSort from '../src/selection-sort';
 import mergeSort from '../src/merge-sort';
+import quickSort from '../src/quick-sort';
 import * as utils from './utils';
 import { expect } from 'chai';
 
@@ -10,7 +11,7 @@ import ints10000 from './data/ints-10000';
 
 function getUnsorted (size) {
   const array = size === 10000 ? ints10000 :
-                size === 10 ? [9, 4, 5, 7, 3, 2, 6, 1, 0, 8] : null;
+                size === 10 ? [4, 9, 8, 7, 3, 2, 6, 1, 0, 5] : null;
   return JSON.parse(JSON.stringify(array));
 }
 
@@ -29,5 +30,8 @@ describe('sorts', () => {
   });
   it('merge sort sorts 10^5 integers', () => {
     expect(utils.isSorted(mergeSort(getUnsorted(10000)))).to.be.true;
+  });
+  it('quick sort sorts 10^5 integers', () => {
+    expect(utils.isSorted(quickSort(getUnsorted(10000)))).to.be.true;
   });
 });

@@ -1,5 +1,5 @@
 /**
- * Selection Sort
+ * Merge Sort
  *
  * Worst-case:       O(n log n)
  * Average-case:     O(n log n)
