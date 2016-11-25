@@ -2,6 +2,7 @@ import nativeSort from '../src/native-sort';
 import bubbleSort from '../src/bubble-sort';
 import insertionSort from '../src/insertion-sort';
 import selectionSort from '../src/selection-sort';
+import mergeSort from '../src/merge-sort';
 import * as utils from './utils';
 import { expect } from 'chai';
 
@@ -25,5 +26,8 @@ describe('sorts', () => {
   });
   it('selection sort sorts 10^5 integers', () => {
     expect(utils.isSorted(selectionSort(getUnsorted(10000)))).to.be.true;
+  });
+  it('merge sort sorts 10^5 integers', () => {
+    expect(utils.isSorted(mergeSort(getUnsorted(10000)))).to.be.true;
   });
 });
