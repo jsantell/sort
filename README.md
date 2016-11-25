@@ -1,2 +1,3 @@
 # sort
-Sorting algorithms in JavaScript
+
+Sorting algorithms in JavaScript.
