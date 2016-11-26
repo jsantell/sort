@@ -1,3 +1,5 @@
+import { swap } from './utils';
+
 /**
  * Quick Sort
  *
@@ -17,13 +19,6 @@ export default function quickSort (array, start=0, end=array.length - 1) {
     quickSort(array, start, p - 1);
     quickSort(array, p + 1, end);
   }
-  return array;
-}
-
-function swap (array, i, j) {
-  let temp = array[i];
-  array[i] = array[j];
-  array[j] = temp;
   return array;
 }
 

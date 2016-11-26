@@ -1,3 +1,5 @@
+import { swap } from './utils';
+
 /**
  * Bubble Sort
  *
@@ -20,10 +22,7 @@ export default function bubbleSort(array) {
     for (let i = 1; i < array.length; i++) {
       if (array[i] < array[i - 1]) {
         arrayIsSorted = false;
-        // Swap
-        let temp = array[i];
-        array[i] = array[i - 1];
-        array[i - 1] = temp;
+        swap(array, i, i - 1);
       }
     }
     return arrayIsSorted;

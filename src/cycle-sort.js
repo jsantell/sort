@@ -1,3 +1,5 @@
+import { swap } from './utils';
+
 /**
  * Cycle Sort
  *
@@ -38,13 +40,6 @@ export default function cycleSort (array) {
     }
   }
 
-  return array;
-}
-
-function swap (array, i, j) {
-  let temp = array[i];
-  array[i] = array[j];
-  array[j] = temp;
   return array;
 }
 

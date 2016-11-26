@@ -1,3 +1,5 @@
+import { swap } from './utils';
+
 /**
  * Selection Sort
  *
@@ -24,9 +26,7 @@ export default function selectionSort(array) {
       }
     }
 
-    let temp = array[minIndex];
-    array[minIndex] = array[i];
-    array[i] = temp;
+    swap(array, minIndex, i);
  }
 
   return array;
