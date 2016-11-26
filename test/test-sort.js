@@ -6,6 +6,7 @@ import mergeSort from '../src/merge-sort';
 import quickSort from '../src/quick-sort';
 import bucketSort from '../src/bucket-sort';
 import cycleSort from '../src/cycle-sort';
+import radixSort from '../src/radix-sort';
 import * as utils from './utils';
 import { expect } from 'chai';
 
@@ -69,7 +70,16 @@ describe('sorts', () => {
       expect(utils.isSorted(cycleSort(clone(ints10)))).to.be.true;
     });
     it('cycle sort sorts 10^5 integers', () => {
-//      expect(utils.isSorted(cycleSort(clone(ints10000)))).to.be.true;
+      expect(utils.isSorted(cycleSort(clone(ints10000)))).to.be.true;
+    });
+  });
+
+  describe('radix sort', () => {
+    it('radix sort sorts integers of varying lengths', () => {
+      expect(utils.isSorted(radixSort([10324, 2, 9, 2403, 449, 202]))).to.be.true;
+    });
+    it('radix sort sorts 10^5 integers', () => {
+      expect(utils.isSorted(radixSort(clone(ints10000)))).to.be.true;
     });
   });
 });
