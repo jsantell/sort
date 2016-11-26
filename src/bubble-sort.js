@@ -5,7 +5,7 @@ import { swap } from './utils';
  *
  * Worst-case:       O(n^2)
  * Average-case:     O(n^2)
- * Best-case:        O(n^2)
+ * Best-case:        O(n)
  * Space complexity: O(1)
  *
  * Good for arrays that are already sorted (?!) as it can detect presorted lists as its built in,
