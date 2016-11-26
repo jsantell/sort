@@ -5,6 +5,7 @@ import selectionSort from '../src/selection-sort';
 import mergeSort from '../src/merge-sort';
 import quickSort from '../src/quick-sort';
 import bucketSort from '../src/bucket-sort';
+import cycleSort from '../src/cycle-sort';
 import * as utils from './utils';
 import { expect } from 'chai';
 
@@ -60,6 +61,15 @@ describe('sorts', () => {
 
     it('bucket sort sorts 10^5 floats', () => {
       expect(utils.isSorted(bucketSort(clone(floats10000)))).to.be.true;
+    });
+  });
+
+  describe('cycle sort', () => {
+    it('cycle sort sorts 10^5 integers', () => {
+      expect(utils.isSorted(cycleSort(clone(ints10)))).to.be.true;
+    });
+    it('cycle sort sorts 10^5 integers', () => {
+//      expect(utils.isSorted(cycleSort(clone(ints10000)))).to.be.true;
     });
   });
 });
