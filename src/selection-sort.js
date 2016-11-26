@@ -6,7 +6,7 @@ import { swap } from './utils';
  * Worst-case:       O(n^2)
  * Average-case:     O(n^2)
  * Best-case:        O(n^2)
- * Space complexity: O(n)
+ * Space complexity: O(1)
  *
  * Good for small arrays, most other simple sorts are better unless writing to memory is expensive,
  * as selection sort has O(n) swaps.
