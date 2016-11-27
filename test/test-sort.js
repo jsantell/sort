@@ -7,6 +7,7 @@ import quickSort from '../src/quick-sort';
 import bucketSort from '../src/bucket-sort';
 import cycleSort from '../src/cycle-sort';
 import radixSort from '../src/radix-sort';
+import countingSort from '../src/counting-sort';
 import * as utils from './utils';
 import { expect } from 'chai';
 
@@ -80,6 +81,12 @@ describe('sorts', () => {
     });
     it('radix sort sorts 10^5 integers', () => {
       expect(utils.isSorted(radixSort(clone(ints10000)))).to.be.true;
+    });
+  });
+
+  describe('counting sort', () => {
+    it('counting sort sorts 10^5 integers', () => {
+      expect(utils.isSorted(countingSort(clone(ints10000)))).to.be.true;
     });
   });
 });
