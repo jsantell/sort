@@ -4,7 +4,7 @@
  * Worst-case:       O(n + k)
  * Average-case:     O(n + k)
  * Best-case:        O(n + k)
- * Space complexity: O(n + k)
+ * Space complexity: O(k)
  *
  * Good for sorting a range of integers, where `k` is a number such that all keys are between 0 and k.
  * Takes up minimal extra space (essentially storing a histogram of integers).

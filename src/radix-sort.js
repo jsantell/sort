@@ -4,14 +4,16 @@
  * Worst-case:       O(n*k) (where n is the number of keys, and k the max word size
  * Average-case:     O(n*k)
  * Best-case:        O(n*k)
- * Space complexity: O(n * k) (worst case)
+ * Space complexity: O(n)
  *
- * As a runtime of O(n*k), `k` can sometimes be considered a constant, but if all `n` are distinct, then `k`
- * at best can be log n, resulting in O(n log n).
+ * Radix sort is a sort run on fixed-length strings, or integers, where `k` is the word length for strings,
+ * or the digit count of integers. If all `n` values are unique, then `k` must be atleast `log n`.
+ * Example: if n=10000 of unique items (1-10000), then `log n` == log(10, 256) == 5, or 5
+ * digits for `k=5`.
  *
- * Radix sort is good to use for small amounts of `k` (fixed integer lengths, capped word length, etc.),
- * when `k` is less than `log n` -- otherwise, sorts like Quick Sort are more general and appropriate with
- * average case of O(n log n), using less space complexity and a less specific sort.
+ * If `k` is considered a constant because it's far less than `log n`, then we can get O(n)
+ * performance, so radix sort is useful for small `k` compared to `n`. Otherwise, more generalized sorts
+ * like Quick Sort can get more realiable and average runtimes of O(n log n).
  */
 
 export default function radixSort (array) {

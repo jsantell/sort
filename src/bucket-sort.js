@@ -6,7 +6,7 @@ import insertionSort from './insertion-sort';
  * Worst-case:       O(n^2)
  * Average-case:     O(n + k)
  * Best-case:        O(n + k)
- * Space complexity: O(n * k) (worst case)
+ * Space complexity: O(n)
  *
  * Good for large arrays, where the number of buckets is close to n and the values are
  * evenly distributed to achieve O(n) performance. Otherwise, the subsorting method,
