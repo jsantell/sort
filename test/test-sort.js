@@ -68,9 +68,6 @@ describe('sorts', () => {
 
   describe('cycle sort', () => {
     it('cycle sort sorts 10^5 integers', () => {
-      expect(utils.isSorted(cycleSort(clone(ints10)))).to.be.true;
-    });
-    it('cycle sort sorts 10^5 integers', () => {
       expect(utils.isSorted(cycleSort(clone(ints10000)))).to.be.true;
     });
   });
