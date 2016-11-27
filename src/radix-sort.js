@@ -21,7 +21,7 @@ export default function radixSort (array) {
 
   while (!isSorted) {
     const buckets = fillBuckets(array, val => {
-      return ~~(val / (Math.pow(10, powerOfTen)) % 10);
+      return ~~(val % (Math.pow(10, powerOfTen + 1)) / Math.pow(10, powerOfTen));
     });
     powerOfTen++;
     isSorted = mergeBuckets(array, buckets);
