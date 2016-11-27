@@ -17,18 +17,16 @@ import { swap } from './utils';
 
 export default function bubbleSort(array) {
 
-  function bubble () {
-    let arrayIsSorted = true;
+  let arrayIsSorted = false;
+  while (!arrayIsSorted) {
+    arrayIsSorted = true;
     for (let i = 1; i < array.length; i++) {
       if (array[i] < array[i - 1]) {
         arrayIsSorted = false;
         swap(array, i, i - 1);
       }
     }
-    return arrayIsSorted;
   }
-
-  while (!bubble()) {}
 
   return array;
 }
