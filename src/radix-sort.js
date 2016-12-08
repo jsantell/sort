@@ -22,11 +22,12 @@ export default function radixSort (array) {
   let powerOfTen = 0;
 
   while (!isSorted) {
-    const buckets = fillBuckets(array, val => {
-      return ~~(val % (Math.pow(10, powerOfTen + 1)) / Math.pow(10, powerOfTen));
-    });
-    powerOfTen++;
+    const tenToTheNth = Math.pow(10, powerOfTen);
+    const tenToTheNthPlusOne = Math.pow(10, powerOfTen + 1);
+
+    const buckets = fillBuckets(array, val => Math.floor(val % tenToTheNthPlusOne / tenToTheNth));
     isSorted = mergeBuckets(array, buckets);
+    powerOfTen++;
   }
 
   function fillBuckets (array, hash) {

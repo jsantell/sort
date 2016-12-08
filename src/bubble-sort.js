@@ -16,7 +16,6 @@ import { swap } from './utils';
  */
 
 export default function bubbleSort(array) {
-
   let arrayIsSorted = false;
   while (!arrayIsSorted) {
     arrayIsSorted = true;

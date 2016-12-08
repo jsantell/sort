@@ -13,11 +13,15 @@ import { swap } from './utils';
  * If swapping is expensive, consider merge sort (if data is a linked-list, for example).
  */
 
-export default function quickSort (array, start=0, end=array.length - 1) {
+export default function quickSort (array) {
+  return quickSortRange(array);
+}
+
+function quickSortRange (array, start=0, end=array.length - 1) {
   if (start < end) {
     const p = partition(array, start, end);
-    quickSort(array, start, p - 1);
-    quickSort(array, p + 1, end);
+    quickSortRange(array, start, p - 1);
+    quickSortRange(array, p + 1, end);
   }
   return array;
 }
