@@ -17,25 +17,14 @@ import insertionSort from './insertion-sort';
  */
 
 export default function bucketSort (array) {
-  // This implementation assumes an array of integers, and we find the min and max
-  // to dynamically compute an optimal bucket size.
-  let min = Number.POSITIVE_INFINITY;
-  let max = Number.NEGATIVE_INFINITY;
-  for (let val of array) {
-    if (val < min) min = val;
-    if (val > max) max = val;
-  }
-  const range = max - min;
-
   const buckets = [];
-  for (let i = 0; i < array.length; i++) {
-    const value = array[i];
+  for (const value of array) {
     const bucketIndex = Math.floor(value);
     const bucket = buckets[bucketIndex] = buckets[bucketIndex] || [];
     bucket.push(value);
   }
 
-  buckets.forEach(bucket => insertionSort(bucket));
+  buckets.forEach(insertionSort);
 
   let i = 0;
   for (const bucket of buckets) {
