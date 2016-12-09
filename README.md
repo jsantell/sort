@@ -5,7 +5,7 @@ Sorting algorithms in JavaScript. For academic purposes rather than production.
 ## Sorts
 
 Type                                    | Best       | Average    | Worst      | Space
---------------------------------------------------------------------------------------------
+----------------------------------------|------------|------------|------------|-------------
 [Bubble Sort](src/bubble-sort.js)       | Ω(n)       | Θ(n²)      | O(n²)      | O(1)
 [Insertion Sort](src/insertion-sort.js) | Ω(n)       | Θ(n²)      | O(n²)      | O(1)
 [Selection Sort](src/selection-sort.js) | Ω(n²)      | Θ(n²)      | O(n²)      | O(1)
