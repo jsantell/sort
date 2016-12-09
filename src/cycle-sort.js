@@ -6,7 +6,7 @@ import { swap } from './utils';
  * Worst-case:       O(n^2)
  * Average-case:     O(n^2)
  * Best-case:        O(n^2)
- * Space complexity: O(n)
+ * Space complexity: O(1)
  *
  * A slow sort, but good for minimizing the number of writes done. Each element is moved either
  * 0 times (already in place) or once (to its final sorting place), so the most optimal in-place
